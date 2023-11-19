@@ -25,8 +25,6 @@ export const HeroSection = () => {
               sequence={[
                 "Oluwafisayo Ibrahim",
                 1000,
-                "Graduate of Electrical and Electronics Engineering",
-                1000,
                 "a FrontEnd Developer",
                 1000,
                 "a frontEnd developer",
