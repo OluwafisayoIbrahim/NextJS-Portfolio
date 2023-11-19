@@ -1,2 +1,2 @@
 # NextJS-Portfolio
-Live Deployment - https://next-js-portfolio-pxmn.vercel.app/
+Live Deployment - https://next-js-portfolio-silk-delta.vercel.app/
