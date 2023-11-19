@@ -35,7 +35,7 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "Tic Tac Toe",
+    title: "Rock Paper Scissors",
     description:
       "This is a classic Rock, Paper, Scissors game implemented in HTML, CSS, and JavaScript.",
     image: "/images/projects/4.jpeg",
@@ -71,7 +71,7 @@ const projectsData = [
     image: "/images/projects/7.jpeg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/OluwafisayoIbrahim/Word-Guess",
-    previewUrl: "/"
+    previewUrl: "https://github.com/OluwafisayoIbrahim/Word-Guess"
   },
   {
     id: 8,
@@ -81,7 +81,7 @@ const projectsData = [
     image: "/images/projects/8.jpeg",
     tag: ["All", "App"],
     gitUrl: "https://github.com/OluwafisayoIbrahim/Currenct-Converter-Using-React",
-    previewUrl: "/"
+    previewUrl: "https://github.com/OluwafisayoIbrahim/Currenct-Converter-Using-React"
   },
   {
     id: 9,
@@ -91,7 +91,7 @@ const projectsData = [
     image: "/images/projects/9.jpeg",
     tag: ["All", "App"],
     gitUrl: "https://github.com/OluwafisayoIbrahim/Note-App",
-    previewUrl: "/"
+    previewUrl: "https://github.com/OluwafisayoIbrahim/Note-App"
   },
   {
     id: 10,
@@ -120,7 +120,7 @@ const projectsData = [
     image: "/images/projects/12.jpeg",
     tag: ["All", "App"],
     gitUrl: "https://github.com/OluwafisayoIbrahim/AI-Image-Generator",
-    previewUrl: "/"
+    previewUrl: "https://github.com/OluwafisayoIbrahim/AI-Image-Generator"
   },
   {
     id: 13,
@@ -130,7 +130,7 @@ const projectsData = [
     image: "/images/projects/13.jpeg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/OluwafisayoIbrahim/Get-Location-using-Geolocation-API",
-    previewUrl: "/"
+    previewUrl: "https://github.com/OluwafisayoIbrahim/Get-Location-using-Geolocation-API"
   },
   {
     id: 14,

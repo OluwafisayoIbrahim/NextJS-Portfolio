@@ -91,7 +91,7 @@ export const EmailSection = () => {
                 id="subject"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Just saying hello"
+                placeholder="Just saying hello!"
               />
             </div>
             <div className="mb-6">
@@ -112,7 +112,7 @@ export const EmailSection = () => {
                   type="submit"
                   className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full mt-4"
                 >
-                  <Link href="emailto:oluwafisayoibrahim2@gmail.com">
+                  <Link href="https://emailto:oluwafisayoibrahim2@gmail.com">
                     Send Message
                   </Link>
                 </button>

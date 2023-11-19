@@ -9,8 +9,10 @@ import TypeScriptIcon from "../../public/typescript-icon.svg";
 import ReactIcon from "../../public/react-icon.png";
 import DegreeIcon from "../../public/degree.png";
 import GraduateIcon from "../../public/graduation-hat.png";
-import InternIcon from "../../public/intern.png";
+import InternIcon from "../../public/intern-icon.png";
 import CourseIcon from "../../public/course.png";
+import CompanyIcon from "../../public/company.png"
+import UniversityIcon from "../../public/university.png"
 
 const TAB_DATA = [
   {
@@ -81,7 +83,15 @@ const TAB_DATA = [
           />
           Electrical and Electronics Engineering
         </li>
-        <li>Olabisi Onabanjo University</li>
+        <li className="flex flex-row mt-0 mb-5 sm:mb-3 gap-2">
+          <Image
+            src={UniversityIcon}
+            alt="University Icon"
+            className="sm-medium lg-small"
+            style={{ width: "30px", height: "30px" }}
+          />
+          Olabisi Onabanjo University
+        </li>
       </ul>
     ),
   },
@@ -163,7 +173,15 @@ const TAB_DATA = [
           />
           Junior Engineer/Intern
         </li>
-        <li>PZ Cussons, Nigeria</li>
+        <li className="flex flex-row mt-0 mb-5 sm:mb-3 gap-2">
+          <Image
+            src={CompanyIcon}
+            alt="Company Icon"
+            className="sm-medium lg-small"
+            style={{ width: "30px", height: "30px" }}
+          />
+          PZ Cussons, Nigeria
+        </li>
       </ul>
     ),
   },
