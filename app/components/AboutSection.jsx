@@ -11,8 +11,10 @@ import DegreeIcon from "../../public/degree.png";
 import GraduateIcon from "../../public/graduation-hat.png";
 import InternIcon from "../../public/intern-icon.png";
 import CourseIcon from "../../public/course.png";
-import CompanyIcon from "../../public/company.png"
-import UniversityIcon from "../../public/university.png"
+import CompanyIcon from "../../public/company.png";
+import UniversityIcon from "../../public/university.png";
+import APIIcon from "../../public/api-icon.png";
+import GitIcon from "../../public/git-icon.svg";
 
 const TAB_DATA = [
   {
@@ -27,7 +29,14 @@ const TAB_DATA = [
             className="sm-medium lg-small"
             style={{ width: "30px", height: "30px" }}
           />
-          HTML
+          <div>
+            <h4>Web Development(HTML, CSS and JavaScript)</h4>
+            <p>
+              Skilled in developing responsive layouts and mobile-friendly
+              interfaces, ensuring consistent user experiences across a variety
+              of devices and screen sizes.
+            </p>
+          </div>
         </li>
 
         <li className="flex flex-row mt-0 mb-5 sm:mb-3">
@@ -37,8 +46,17 @@ const TAB_DATA = [
             className="sm-medium lg-small"
             style={{ width: "30px", height: "30px" }}
           />
-          CSS
+          <div>
+            <h4>Web Design</h4>
+            <p>
+              Skilled in constructing responsive and interactive web
+              applications with contemporary web technologies, guaranteeing
+              smooth user experiences and compatibility across different
+              browsers.
+            </p>
+          </div>
         </li>
+
         <li className="flex flex-row mt-0 mb-5 sm:mb-3">
           <Image
             src={JavaScriptIcon}
@@ -46,8 +64,18 @@ const TAB_DATA = [
             className="sm-medium lg-small"
             style={{ width: "30px", height: "30px" }}
           />
-          JavaScript
+          <div>
+            <h4>Mobile App Development</h4>
+            <p>
+              Developed a mobile application by utilizing HTML, CSS, and
+              JavaScript, seamlessly integrating it with Firebase backend for
+              real-time data synchronization, authentication, and cloud storage.
+              Ensured a smooth user experience and implemented robust security
+              measures for data handling.
+            </p>
+          </div>
         </li>
+
         <li className="flex flex-row mt-0 mb-5 sm:mb-3">
           <Image
             src={ReactIcon}
@@ -55,8 +83,15 @@ const TAB_DATA = [
             className="sm-medium lg-small"
             style={{ width: "30px", height: "30px" }}
           />
-          ReactJS
+          <div>
+            <h4>ReactJS Development</h4>
+            <p>
+              Constructing front-end applications with React.js component-based
+              architecture, emphasizing dynamic and scalable design.
+            </p>
+          </div>
         </li>
+
         <li className="flex flex-row mt-0 mb-5 sm:mb-3">
           <Image
             src={TypeScriptIcon}
@@ -64,7 +99,52 @@ const TAB_DATA = [
             className="sm-medium lg-small"
             style={{ width: "30px", height: "30px" }}
           />
-          TypeScript
+          <div>
+            <h4>TypeScript Development</h4>
+            <p>
+              Building exclusively with TypeScript for efficient and scalable
+              applications, leveraging its powerful features for streamlined
+              development. Using TypeScript independently ensures a
+              straightforward process, capitalizing on its strong static typing
+              and modern language features for enhanced code quality and
+              maintainability.
+            </p>
+          </div>
+        </li>
+
+        <li className="flex flex-row mt-0 mb-5 sm:mb-3">
+          <Image
+            src={APIIcon}
+            alt="Typescript Icon"
+            className="sm-medium lg-small"
+            style={{ width: "30px", height: "30px" }}
+          />
+          <div>
+            <h4>Restful APIs</h4>
+            <p>
+              Linking front-end applications to RESTful APIs for seamless data
+              management and communication.
+            </p>
+          </div>
+        </li>
+        <li className="flex flex-row mt-0 mb-5 sm:mb-3">
+          <Image
+            src={GitIcon}
+            alt="Typescript Icon"
+            className="sm-medium lg-small"
+            style={{ width: "30px", height: "30px" }}
+          />
+          <div className="relative mr-2">
+            <h4>Git SCM(Source Code Management)</h4>
+            <p>
+              Effectively navigating and organizing code repositories through
+              Git, a powerful version control system, to foster a seamless
+              collaborative environment. This involves employing Git&apos;s features
+              for efficient code tracking, collaborative problem-solving, and
+              smooth integration of changes, ensuring a streamlined and
+              cooperative development process.
+            </p>
+          </div>
         </li>
       </ul>
     ),
@@ -163,26 +243,31 @@ const TAB_DATA = [
     title: "Experience",
     id: "experience",
     content: (
-      <ul className="pl-2">
-        <li className="flex flex-row mt-0 mb-5 sm:mb-3 gap-2">
-          <Image
-            src={InternIcon}
-            alt="Intern Icon"
-            className="sm-medium lg-small"
-            style={{ width: "30px", height: "30px" }}
-          />
-          Junior Engineer/Intern
-        </li>
-        <li className="flex flex-row mt-0 mb-5 sm:mb-3 gap-2">
-          <Image
-            src={CompanyIcon}
-            alt="Company Icon"
-            className="sm-medium lg-small"
-            style={{ width: "30px", height: "30px" }}
-          />
-          PZ Cussons, Nigeria
-        </li>
-      </ul>
+      <>
+        <ul className="pl-2">
+          <li className="flex flex-row mt-0 mb-5 sm:mb-3 gap-2">
+            <Image
+              src={InternIcon}
+              alt="Intern Icon"
+              className="sm-medium lg-small"
+              style={{ width: "30px", height: "30px" }}
+            />
+            Junior Engineer/Intern: Assisted in various engineering projects,
+            gaining exposure to industrial processes and systems. Collaborated
+            with a team to troubleshoot and maintain equipment. Worked with
+            various software programs such as Agility, INSITE and PROTEUS.
+          </li>
+          <li className="flex flex-row mt-0 mb-5 sm:mb-3 gap-2">
+            <Image
+              src={CompanyIcon}
+              alt="Company Icon"
+              className="sm-medium lg-small"
+              style={{ width: "30px", height: "30px" }}
+            />
+            PZ Cussons, Nigeria
+          </li>
+        </ul>
+      </>
     ),
   },
 ];

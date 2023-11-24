@@ -10,13 +10,12 @@ export const Footer = () => {
         <Image
               src={Me}
               alt="my image"
-              className="object-cover border-2 border-black-900 rounded-12 br-12 mr-15 mb-20 block mx-auto"
+              className="object-cover border-2 border-black-900 rounded-15 br-12 mr-15 mb-20 block mx-auto"
               width={80}
               height={80}
             />
         </span>
-        Oluwafisayo Ibrahim
-        <p className="text-slate-600">All rights reserved.</p>
+        <p className="text-slate-600">Oluwafisayo Ibrahim</p>
       </div>
     </footer>
   );

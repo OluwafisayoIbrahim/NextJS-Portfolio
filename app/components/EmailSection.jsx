@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import GithubIcon from "../../public/github-icon.svg";
 import TwitterIcon from "../../public/twitter-icon.svg";
+import InstagramIcon from "../../public/instagram-icon.svg";
+import IndeedIcon from "../../public/indeed-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -57,6 +59,12 @@ export const EmailSection = () => {
             </Link>
             <Link href="https://twitter.com/whoisfisayo">
               <Image src={TwitterIcon} alt="Twitter Icon" />
+            </Link>
+            <Link href="https://instagram.com/whoisfisayo">
+              <Image src={InstagramIcon} alt="Twitter Icon" />
+            </Link>
+            <Link href="https://profile.indeed.com/p/oluwafisayoi-w6d5777">
+              <Image src={IndeedIcon} alt="Twitter Icon" />
             </Link>
           </div>
         </div>

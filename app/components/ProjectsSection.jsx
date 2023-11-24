@@ -152,6 +152,16 @@ const projectsData = [
     gitUrl: "https://github.com/OluwafisayoIbrahim/GIF-Generator",
     previewUrl: "https://gif-generator-rosy-delta.vercel.app/"
   },
+  {
+    id: 16,
+    title: "List App",
+    description:
+      "This is a simple To-Do List application with TypeScript and JavaScript.",
+    image: "/images/projects/16.jpeg",
+    tag: ["All", "App"],
+    gitUrl: "https://github.com/OluwafisayoIbrahim/List-Generator",
+    previewUrl: "https://list-green.vercel.app/"
+  },
 ];
 
 export const ProjectsSection = () => {
