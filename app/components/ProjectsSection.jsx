@@ -91,7 +91,7 @@ const projectsData = [
     image: "/images/projects/9.jpeg",
     tag: ["All", "App"],
     gitUrl: "https://github.com/OluwafisayoIbrahim/Note-App",
-    previewUrl: "https://github.com/OluwafisayoIbrahim/Note-App"
+    previewUrl: "https://note-app-psi-amber.vercel.app/"
   },
   {
     id: 10,
