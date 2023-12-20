@@ -162,6 +162,36 @@ const projectsData = [
     gitUrl: "https://github.com/OluwafisayoIbrahim/List-Generator",
     previewUrl: "https://list-green.vercel.app/"
   },
+  {
+    id: 17,
+    title: "Shopify Clone",
+    description:
+      "This is a Shopify Clone created with HTML, CSS and Javascript. Originally a PSD on Figma converted to HTML.",
+    image: "/images/projects/17.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/OluwafisayoIbrahim/Hackathon",
+    previewUrl: "https://hackathon-two-phi.vercel.app"
+  },
+  {
+    id: 18,
+    title: "Quiz App",
+    description:
+      "This is a simple and interactive React application for testing your knowledge with multiple-choice questions.",
+    image: "/images/projects/18.jpeg",
+    tag: ["All", "App"],
+    gitUrl: "https://github.com/OluwafisayoIbrahim/Quiz-App",
+    previewUrl: "https://quiz-app-nine-rosy.vercel.app/"
+  },
+  {
+    id: 19,
+    title: "Shopping Cart",
+    description:
+      "This is a Shopping Cart Website created with React Typescript.",
+    image: "/images/projects/19.jpeg",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/OluwafisayoIbrahim/Shopping-Cart",
+    previewUrl: "https://shopping-cart-indol-alpha.vercel.app/"
+  },
 ];
 
 export const ProjectsSection = () => {

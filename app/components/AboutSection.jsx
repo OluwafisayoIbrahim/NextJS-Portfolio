@@ -67,11 +67,8 @@ const TAB_DATA = [
           <div>
             <h4>Mobile App Development</h4>
             <p>
-              Developed a mobile application by utilizing HTML, CSS, and
-              JavaScript, seamlessly integrating it with Firebase backend for
-              real-time data synchronization, authentication, and cloud storage.
-              Ensured a smooth user experience and implemented robust security
-              measures for data handling.
+              Building a mobile application by utilizing HTML, CSS, and
+              JavaScript.
             </p>
           </div>
         </li>
@@ -139,10 +136,10 @@ const TAB_DATA = [
             <p>
               Effectively navigating and organizing code repositories through
               Git, a powerful version control system, to foster a seamless
-              collaborative environment. This involves employing Git&apos;s features
-              for efficient code tracking, collaborative problem-solving, and
-              smooth integration of changes, ensuring a streamlined and
-              cooperative development process.
+              collaborative environment. This involves employing Git&apos;s
+              features for efficient code tracking, collaborative
+              problem-solving, and smooth integration of changes, ensuring a
+              streamlined and cooperative development process.
             </p>
           </div>
         </li>
@@ -294,17 +291,26 @@ export const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am passionate about creating dynamic web applications, constantly
-            seeking new challenges. Specializing in TypeScript and React.js,
-            with JavaScript, HTML, and CSS background, I aim to create fluid
-            user experiences. I enjoy working with cross-functional teams and
-            embracing the ever-changing web development field. I am passionate
-            about creating dynamic and user-friendly web applications, and I am
-            constantly looking for new challenges to advance my frontend
-            programming abilities. I keep up with the most recent developments
-            in the field to guarantee that the answers my objective is to
-            contribute positively to the online user experience by embracing the
-            dynamic and constantly evolving world of web development.
+            Hello World!👋🌎
+            <br />
+            <br />
+            Hey there! 👋 I&apos;m all about making cool stuff on the web
+            and giving you the best online experience! 💻✨ I&apos;m your go-to
+            person for TypeScript and React.js, using the magic combo of
+            JavaScript, HTML, and CSS. 🛠️ Whether I&apos;m busy coding or taking
+            on challenges, I&apos;m always up for it! 😎 I love hanging out in
+            the ever-changing world of web development. 🚀 Teaming up with
+            people from different backgrounds is my jam, and I enjoy the ride as
+            things keep getting cooler in tech. 🌐 I&apos;m always on the
+            lookout for the latest trends, aiming to bring good vibes to your
+            online journey. 🌈✨ Let&apos;s kick off this web adventure together
+            and make the internet a way more awesome place! 🚀💻 Exciting
+            challenges and creative solutions fuel my passion for innovation. 🔥
+            Join me in exploring cutting-edge technologies, where every line of
+            code is a step towards a brighter digital future. 🌐💡 Together,
+            we&apos;ll shape the online world into a space that&apos;s not just
+            functional but downright extraordinary! 🌟💫😊 #HelloWorld
+            #WebDevMagic #InnovationJourney
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
