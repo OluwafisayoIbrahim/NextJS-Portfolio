@@ -16,10 +16,15 @@ const achievementsList = [
     postfix: "+",
   },
   {
-    prefix: "~",
     metric: "Years",
     value: "2",
+    postfix: "+",
   },
+  {
+    metric: "Followers on DEV Community",
+    value: "140",
+    postfix: "+",
+  }
 ];
 
 export const AchievementsSection = () => {

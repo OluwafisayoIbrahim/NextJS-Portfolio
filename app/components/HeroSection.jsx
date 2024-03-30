@@ -22,17 +22,13 @@ export const HeroSection = () => {
             <TypeAnimation
               sequence={[
                 "Oluwafisayo Ibrahim",
-                1000,
-                "Graduate of Electrical and Electronics Engineering",
-                1000,
+                100,
                 "a FrontEnd Developer",
-                1000,
-                "a frontEnd developer",
-                1000,
+                100,
                 "a Web Developer",
-                1000,
+                100,
                 "a Web Designer",
-                1000,
+                100,
               ]}
               wrapper="span"
               speed={10}
