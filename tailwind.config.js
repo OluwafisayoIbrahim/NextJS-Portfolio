@@ -18,49 +18,21 @@ module.exports = {
     },
     colors: {
       ...colors,
-      primary: getPrimaryColor(),
+      primary: colors.blue,
       secondary: getSecondaryColor(),
     },
   },
   plugins: [],
 }
 
-function getPrimaryColor() {
-  const now = new Date();
-  const morningStart = setHours(now, 6); // Adjust this time based on your preferences
-  const afternoonStart = setHours(now, 12); // Adjust this time based on your preferences
-  const eveningStart = setHours(now, 18); // Adjust this time based on your preferences
-
-  if (isBefore(now, morningStart)) {
-    // Morning colors: Red or Orange
-    return isBefore(now, afternoonStart) ? colors.red[500] : colors.orange[500];
-  } else if (isBefore(now, afternoonStart)) {
-    // Afternoon colors: Yellow, Green, or Blue
-    const afternoonColors = [colors.yellow[500], colors.green[500], colors.blue[500]];
-    const randomIndex = Math.floor(Math.random() * afternoonColors.length);
-    return afternoonColors[randomIndex];
-  } else {
-    // Evening colors: Indigo or Violet
-    return isBefore(now, eveningStart) ? colors.indigo[500] : colors.violet[500];
-  }
-}
-
-
 function getSecondaryColor() {
-  const now = new Date();
-  const morningStart = setHours(now, 6); // Adjust this time based on your preferences
-  const afternoonStart = setHours(now, 12); // Adjust this time based on your preferences
-  const eveningStart = setHours(now, 18); // Adjust this time based on your preferences
-
-  if (isBefore(now, morningStart)) {
-    // Morning secondary colors: Blue Gray or Cool Gray
-    return isBefore(now, afternoonStart) ? colors.blueGray[500] : colors.coolGray[500];
-  } else if (isBefore(now, afternoonStart)) {
-    // Afternoon secondary colors: Warm Gray or True Gray
-    return isBefore(now, eveningStart) ? colors.warmGray[500] : colors.trueGray[500];
-  } else {
-    // Evening secondary colors: Gray
-    return colors.gray[500];
-  }
+  const secondaryColors = [
+    colors.blueGray,
+    colors.coolGray,
+    colors.warmGray,
+    colors.trueGray,
+    colors.gray,
+  ];
+  const randomIndex = Math.floor(Math.random() * secondaryColors.length);
+  return secondaryColors[randomIndex];
 }
-

@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import GithubIcon from "../../public/github-icon.svg";
 import TwitterIcon from "../../public/xicon.svg";
@@ -8,38 +7,46 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const EmailSection = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    email: "",
+    subject: "",
+    message: ""
+  });
+  const [emailSent, setEmailSent] = useState(false);
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(false); 
 
-  const handleSubmit = async (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const sendMail = async (e) => {
     e.preventDefault();
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
 
-    // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
-      method: "POST",
-      // Tell the server we're sending JSON.
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
-    };
+    try {
+      setIsLoading(true);
+      const response = await fetch('/api/send/', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
+      if (response.ok) {
+        setEmailSent(true);
+        setFormData({ email: "", subject: "", message: "" });
+      } else {
+        throw new Error("Failed to send email");
+      }
+    } catch (error) {
+      setError("Failed to send email");
+    } finally {
+      setIsLoading(false); 
     }
   };
+  
   return (
       <section
         id="email-section"
@@ -69,67 +76,56 @@ export const EmailSection = () => {
           </div>
         </div>
         <div>
-          <form className="flex flex-col" onSubmit={handleSubmit}>
+          <form className="flex flex-col" onSubmit={sendMail}>
             <div className="mb-6">
-              <label
-                htmlFor="email"
-                className="text-white block text-sm mb-2 font-medium"
-              >
+              <label htmlFor="email" className="text-white block text-sm mb-2 font-medium">
                 Your Email
               </label>
               <input
                 name="email"
                 type="email"
                 id="email"
+                value={formData.email}
+                onChange={handleChange}
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="youremail@example.com"
               />
             </div>
             <div className="mb-6">
-              <label
-                htmlFor="subject"
-                className="text-white block text-sm mb-2 font-medium"
-              >
+              <label htmlFor="subject" className="text-white block text-sm mb-2 font-medium">
                 Subject
               </label>
               <input
                 name="subject"
                 type="text"
                 id="subject"
+                value={formData.subject}
+                onChange={handleChange}
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="Just saying hello!"
               />
             </div>
             <div className="mb-6">
-              <label
-                htmlFor="message"
-                className="text-white block text-sm mb-2 font-medium"
-              >
+              <label htmlFor="message" className="text-white block text-sm mb-2 font-medium">
                 Message
               </label>
               <textarea
                 name="message"
                 id="message"
+                value={formData.message}
+                onChange={handleChange}
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="Let's talk..."
               />
-              <div>
-                <button
-                  type="submit"
-                  className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full mt-4"
-                >
-                  <Link href="https://emailto:oluwafisayoibrahim2@gmail.com">
-                    Send Message
-                  </Link>
-                </button>
-                {emailSubmitted && (
-                  <p className="text-green-500 text-sm mt-2">
-                    Email sent successfully!
-                  </p>
-                )}
-              </div>
+            </div>
+            <div>
+              <button type="submit" className={`bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full mt-4 ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                {isLoading ? 'Sending...' : 'Send Message'}
+              </button>
+              {emailSent && <p className="text-green-500 text-sm mt-2">Email sent successfully!</p>}
+              {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
             </div>
           </form>
         </div>

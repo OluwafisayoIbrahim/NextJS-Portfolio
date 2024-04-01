@@ -9,12 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@heroicons/react": "^2.0.18",
     "@vscode/codicons": "^0.0.35",
     "bootstrap-icons": "^1.11.1",
     "date-fns": "^3.0.1",
-    "framer-motion": "^10.16.5",
+    "framer-motion": "^10.18.0",
     "next": "14.0.2",
+    "nodemailer": "^6.9.13",
     "react": "^18",
     "react-animated-numbers": "^0.16.0",
     "react-dom": "^18",
