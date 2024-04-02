@@ -1,47 +1,71 @@
-"use client"
+"use client";
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
+import HTMLIcon from "../../app/components/icons/HTMLIcon"
+import CSSIcon from "../../app/components/icons/CSSIcon"
+import JavaScriptIcon from "../../app/components/icons/JavaScriptIcon"
+import TypeScriptIcon from "../../app/components/icons/TypeScriptIcon";
+import ReactIcon from "../../app/components/icons/ReactIcon";
+import NextJSIcon from "./icons/NextJSIcon";
+import TailwindCSSIcon from "./icons/TailwindCSSIcon";
 
 const projectsData = [
   {
     id: 1,
-    title: "Login Form Website",
-    description: "A Login Form using HTML, CSS and JavaScript",
-    image: "/images/projects/1.jpeg",
+    title: "Tutored Outfits",
+    description: "A clothing store which is a contemporary ready-to-wear brand that specializes in crafting stylish and versatile attire for modern women.",
+    image: "/images/projects/20.jpg",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/OluwafisayoIbrahim/Login-Form",
-    previewUrl: "https://login-form-sigma-topaz.vercel.app/"
+    gitUrl: "https://tailor-web-template.vercel.app/",
+    previewUrl: "https://tailor-web-template.vercel.app/",
+    codeTypes: [
+      { name: "NextJS", icon: <NextJSIcon /> },
+      { name: "TailwindCSS", icon: <TailwindCSSIcon /> },
+    ],
   },
   {
     id: 2,
-    title: "Captcha Generator",
-    description: "This CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart)is created in this context using HTML , CSS and Javascript.",
-    image: "/images/projects/2.jpeg",
+    title: "Shopify Clone",
+    description:
+      "This is a Shopify Clone created with HTML, CSS and Javascript. Originally a PSD on Figma converted to HTML.",
+    image: "/images/projects/17.jpg",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/OluwafisayoIbrahim/Captcha-Generator",
-    previewUrl: "https://captcha-generator-rho.vercel.app/"
+    gitUrl: "https://github.com/OluwafisayoIbrahim/Hackathon",
+    previewUrl: "https://hackathon-two-phi.vercel.app",
+    codeTypes : [
+      { name: "HTML", icon: <HTMLIcon />},
+      { name: "CSS", icon: <CSSIcon />},
+      { name: "JavaScript", icon: <JavaScriptIcon />},
+    ]
   },
   {
     id: 3,
+    title: "Note App",
+    description:
+      "This is a web application built using React and React Router that allows users to create, organize, and manage their notes. ",
+    image: "/images/projects/9.jpeg",
+    tag: ["All", "App"],
+    gitUrl: "https://github.com/OluwafisayoIbrahim/Note-App",
+    previewUrl: "https://note-app-psi-amber.vercel.app/",
+    codeTypes : [
+      { name: "ReactJS", icon: <ReactIcon />},
+      { name: "TypeScript", icon: <TypeScriptIcon />}
+    ]
+  },
+  {
+    id: 4,
     title: "Calculator App",
     description:
       "This is a fully functional calculator web application built using React.js.",
     image: "/images/projects/3.jpeg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/OluwafisayoIbrahim/calculator-app",
-    previewUrl: "https://calculator-app-eosin-delta.vercel.app/"
-  },
-  {
-    id: 4,
-    title: "Rock Paper Scissors",
-    description:
-      "This is a classic Rock, Paper, Scissors game implemented in HTML, CSS, and JavaScript.",
-    image: "/images/projects/4.jpeg",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/OluwafisayoIbrahim/Rock-Paper-Scissors-Game",
-    previewUrl: "https://calculator-app-6qcp.vercel.app/"
+    previewUrl: "https://calculator-app-eosin-delta.vercel.app/",
+    codeTypes : [
+      { name: "ReactJS", icon: <ReactIcon />},
+    ]
   },
   {
     id: 5,
@@ -51,146 +75,93 @@ const projectsData = [
     image: "/images/projects/5.jpeg",
     tag: ["All", "App"],
     gitUrl: "https://github.com/OluwafisayoIbrahim/Weather-App-using-API",
-    previewUrl: "https://weather-app-using-api-kappa.vercel.app/"
+    previewUrl: "https://weather-app-using-api-kappa.vercel.app/",
+    codeTypes : [
+      { name: "ReactJS", icon: <ReactIcon />},
+    ]
   },
   {
     id: 6,
-    title: "QR Code Generator",
-    description:
-      "A simple QR Code Generator using HTML, CSS and Javascript. It is a simple web-based QR code generator that allows you to generate QR codes from text or URLs.",
-    image: "/images/projects/6.jpeg",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/OluwafisayoIbrahim/QR-code-Generator",
-    previewUrl: "https://qr-code-generator-delta-liart.vercel.app/"
-  },
-  {
-    id: 7,
-    title: "Word Guess",
-    description:
-      "This is a simple web-based word guessing game that allows players to guess a randomly selected word based on a given hint. ",
-    image: "/images/projects/7.jpeg",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/OluwafisayoIbrahim/Word-Guess",
-    previewUrl: "https://github.com/OluwafisayoIbrahim/Word-Guess"
-  },
-  {
-    id: 8,
-    title: "Currency Converter",
-    description:
-      "This is a simple React.js application that allows you to convert currency from one currency to another using the latest exchange rates",
-    image: "/images/projects/8.jpeg",
-    tag: ["All", "App"],
-    gitUrl: "https://github.com/OluwafisayoIbrahim/Currenct-Converter-Using-React",
-    previewUrl: "https://github.com/OluwafisayoIbrahim/Currenct-Converter-Using-React"
-  },
-  {
-    id: 9,
-    title: "Note App",
-    description:
-      "This is a web application built using React and React Router that allows users to create, organize, and manage their notes. ",
-    image: "/images/projects/9.jpeg",
-    tag: ["All", "App"],
-    gitUrl: "https://github.com/OluwafisayoIbrahim/Note-App",
-    previewUrl: "https://note-app-psi-amber.vercel.app/"
-  },
-  {
-    id: 10,
     title: "To Do List",
     description:
       "This simple yet effective to-do list application is built using React, providing you with a user-friendly interface to manage your tasks.",
     image: "/images/projects/10.jpeg",
     tag: ["All", "App"],
     gitUrl: "https://github.com/OluwafisayoIbrahim/To-Do-List",
-    previewUrl: "https://to-do-list-sable-iota.vercel.app/"
+    previewUrl: "https://to-do-list-sable-iota.vercel.app/",
+    codeTypes : [
+      { name: "ReactJS", icon: <ReactIcon />},
+    ]
   },
   {
-    id: 11,
+    id: 7,
     title: "Tic Tac Toe",
     description: "A simple and fun Tic-Tac-Toe game built with React.",
     image: "/images/projects/11.jpeg",
     tag: ["All", "App"],
     gitUrl: "https://github.com/OluwafisayoIbrahim/Tic-Tac-Toe",
-    previewUrl: "https://tic-tac-toe-lime-tau.vercel.app/"
+    previewUrl: "https://tic-tac-toe-lime-tau.vercel.app/",
+    codeTypes : [
+      { name: "ReactJS", icon: <ReactIcon />},
+    ]
   },
   {
-    id: 12,
-    title: "AI Image generator",
-    description:
-      "This allows you to create AI-generated images based on a textual description. Users can input a description, and the component fetches an image generated by an AI model and displays it.",
-    image: "/images/projects/12.jpeg",
-    tag: ["All", "App"],
-    gitUrl: "https://github.com/OluwafisayoIbrahim/AI-Image-Generator",
-    previewUrl: "https://github.com/OluwafisayoIbrahim/AI-Image-Generator"
-  },
-  {
-    id: 13,
-    title: "Get Location",
-    description:
-      "This is a simple code used to get the current position of a user using Geolocation API in Reactjs.",
-    image: "/images/projects/13.jpeg",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/OluwafisayoIbrahim/Get-Location-using-Geolocation-API",
-    previewUrl: "https://github.com/OluwafisayoIbrahim/Get-Location-using-Geolocation-API"
-  },
-  {
-    id: 14,
+    id: 8,
     title: "Image Search",
     description:
       "This is a simple web-based image search engine that allows users to search for high-quality images using keywords.",
     image: "/images/projects/14.jpeg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/OluwafisayoIbrahim/Image-Search",
-    previewUrl: "https://image-search-pearl-six.vercel.app/"
+    previewUrl: "https://image-search-pearl-six.vercel.app/",
+    codeTypes : [
+      { name: "HTML", icon: <HTMLIcon />},
+      { name: "CSS", icon: <CSSIcon />},
+      { name: "JavaScript", icon: <JavaScriptIcon />},
+    ]
   },
   {
-    id: 15,
+    id: 9,
     title: "GIF Generator",
     description:
       "This code is a web-based GIF Generator that allows users to search for and easily copy direct links to GIFs, providing a user-friendly interface for GIF enthusiasts.",
     image: "/images/projects/15.jpeg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/OluwafisayoIbrahim/GIF-Generator",
-    previewUrl: "https://gif-generator-rosy-delta.vercel.app/"
+    previewUrl: "https://gif-generator-rosy-delta.vercel.app/",
+    codeTypes : [
+      { name: "HTML", icon: <HTMLIcon />},
+      { name: "CSS", icon: <CSSIcon />},
+      { name: "JavaScript", icon: <JavaScriptIcon />},
+    ]
   },
   {
-    id: 16,
+    id: 10,
     title: "List App",
     description:
       "This is a simple To-Do List application with TypeScript and JavaScript.",
     image: "/images/projects/16.jpeg",
     tag: ["All", "App"],
     gitUrl: "https://github.com/OluwafisayoIbrahim/List-Generator",
-    previewUrl: "https://list-green.vercel.app/"
+    previewUrl: "https://list-green.vercel.app/",
+    codeTypes : [
+      { name: "JavaScript", icon: <JavaScriptIcon />},
+      { name: "TypeScript", icon: <TypeScriptIcon />}
+    ]
   },
   {
-    id: 17,
-    title: "Shopify Clone",
-    description:
-      "This is a Shopify Clone created with HTML, CSS and Javascript. Originally a PSD on Figma converted to HTML.",
-    image: "/images/projects/17.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/OluwafisayoIbrahim/Hackathon",
-    previewUrl: "https://hackathon-two-phi.vercel.app"
-  },
-  {
-    id: 18,
-    title: "Quiz App",
-    description:
-      "This is a simple and interactive React application for testing your knowledge with multiple-choice questions.",
-    image: "/images/projects/18.jpeg",
-    tag: ["All", "App"],
-    gitUrl: "https://github.com/OluwafisayoIbrahim/Quiz-App",
-    previewUrl: "https://quiz-app-nine-rosy.vercel.app/"
-  },
-  {
-    id: 19,
+    id: 11,
     title: "Shopping Cart",
     description:
       "This is a Shopping Cart Website created with React Typescript.",
     image: "/images/projects/19.jpeg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/OluwafisayoIbrahim/Shopping-Cart",
-    previewUrl: "https://shopping-cart-indol-alpha.vercel.app/"
+    previewUrl: "https://shopping-cart-indol-alpha.vercel.app/",
+    codeTypes : [
+      { name: "ReactJS", icon: <ReactIcon />},
+      { name: "TypeScript", icon: <TypeScriptIcon />}
+    ]
   },
 ];
 
@@ -250,6 +221,7 @@ export const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              codeTypes={project.codeTypes}
             />
           </motion.li>
         ))}
@@ -257,4 +229,3 @@ export const ProjectsSection = () => {
     </section>
   );
 };
-

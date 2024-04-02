@@ -2,7 +2,7 @@ import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, codeTypes }) => {
   return (
     <div>
       <div
@@ -25,8 +25,20 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
         </div>
       </div>
       <div className="text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-4">
+        <div className="flex gap-2 mb-2">
+          {codeTypes &&
+            codeTypes.map((codeType, index) => (
+              <div
+                key={index}
+                className="flex items-center rounded-md bg-gray-700 px-2 py-1"
+              >
+                {codeType.icon}
+                <span className="ml-1 text-xs text-[#ADB7BE]">{codeType.name}</span>
+              </div>
+            ))}
+        </div>
         <h5 className="font-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ADB7BE]">{description}</p>
+        <p className="text-[#ADB7BE] mb-4">{description}</p>
       </div>
     </div>
   );

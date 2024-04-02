@@ -6,7 +6,7 @@ import HTMLIcon from "../../public/html-icon.svg";
 import CSSIcon from "../../public/css-icon.svg";
 import JavaScriptIcon from "../../public/javascript-icon.svg";
 import TypeScriptIcon from "../../public/typescript-icon.svg";
-import ReactIcon from "../../public/react-icon.png";
+import ReactIcon from "../../public/react-icon.svg";
 import DegreeIcon from "../../public/degree.png";
 import GraduateIcon from "../../public/graduation-hat.png";
 import InternIcon from "../../public/intern-icon.png";
@@ -15,6 +15,8 @@ import CompanyIcon from "../../public/company.png";
 import UniversityIcon from "../../public/university.png";
 import APIIcon from "../../public/api-icon.png";
 import GitIcon from "../../public/git-icon.svg";
+import NextJSIcon from "../../public/nextjs.svg";
+import TailwindCSSIcon from "../../public/tailwind-css.svg";
 
 const TAB_DATA = [
   {
@@ -70,7 +72,7 @@ const TAB_DATA = [
         <li className="flex flex-row mt-0 mb-5 sm:mb-3">
           <Image
             src={APIIcon}
-            alt="Typescript Icon"
+            alt="API Icon"
             className="sm-medium lg-small"
             style={{ width: "30px", height: "30px" }}
           />
@@ -78,7 +80,23 @@ const TAB_DATA = [
         <li className="flex flex-row mt-0 mb-5 sm:mb-3">
           <Image
             src={GitIcon}
-            alt="Typescript Icon"
+            alt="Git Icon"
+            className="sm-medium lg-small"
+            style={{ width: "30px", height: "30px" }}
+          />
+        </li>
+        <li className="flex flex-row mt-0 mb-5 sm:mb-3">
+          <Image
+            src={NextJSIcon}
+            alt="NextJS Icon"
+            className="sm-medium lg-small"
+            style={{ width: "30px", height: "30px" }}
+          />
+        </li>
+        <li className="flex flex-row mt-0 mb-5 sm:mb-3">
+          <Image
+            src={TailwindCSSIcon}
+            alt="TailwindCSS Icon"
             className="sm-medium lg-small"
             style={{ width: "30px", height: "30px" }}
           />
