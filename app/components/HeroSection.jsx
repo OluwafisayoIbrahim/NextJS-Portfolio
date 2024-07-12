@@ -21,24 +21,20 @@ export const HeroSection = () => {
             <br />
             <TypeAnimation
               sequence={[
-                "Oluwafisayo Ibrahim",
-                100,
+                "Oluwafisayo",
+                5000,
                 "a FrontEnd Developer",
-                100,
-                "a Web Developer",
-                100,
-                "a Web Designer",
-                100,
+                5000,
               ]}
               wrapper="span"
               speed={10}
-              repeat={Infinity}
+              repeat={1}
             />
           </h1>
 
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             With over 2 years of experience, I have honed my skills in web
-            development. My expertise includes HTML, CSS, JavaScript, React.js,
+            development. My expertise includes HTML, CSS, JavaScript, React.js, Next.js
             and TypeScript.
           </p>
           <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white">
@@ -48,10 +44,10 @@ export const HeroSection = () => {
             <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
               <Link
                 href={
-                  "https://docs.google.com/document/d/1GbYJmgcxR6rBQImXaTqLz29ljvZsw7a0/edit?usp=drive_link&ouid=113547975943069970988&rtpof=true&sd=true"
+                  "https://docs.google.com/document/d/1pFSzpMiSKNUaQb45jdFQ0mS2jTuV-D51/edit?rtpof=true&sd=true"
                 }
               >
-                Download CV
+                Read my CV
               </Link>
             </span>
           </button>
