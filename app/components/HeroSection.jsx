@@ -24,7 +24,6 @@ export const HeroSection = () => {
                 "Oluwafisayo",
                 5000,
                 "a FrontEnd Developer",
-                5000,
               ]}
               wrapper="span"
               speed={10}
