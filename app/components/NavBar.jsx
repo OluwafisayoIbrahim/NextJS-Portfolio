@@ -95,7 +95,7 @@ export const NavBar = () => {
               href="/"
               className="text-2xl md:text-5xl text-white font-semibold"
             >
-              Oluwafisayo&apos; Portfolio
+              Oluwafisayo&apos;s Portfolio
             </Link>
             <div className="mobile-menu block md:hidden">
               <button
