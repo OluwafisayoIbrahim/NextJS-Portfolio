@@ -252,23 +252,12 @@ export const AboutSection = () => {
             Hello World!👋🌎
             <br />
             <br />
-            Hey there! 👋 I&apos;m all about making cool stuff on the web
-            and giving you the best online experience! 💻✨ I&apos;m your go-to
-            person for TypeScript and React.js, using the magic combo of
-            JavaScript, HTML, and CSS. 🛠️ Whether I&apos;m busy coding or taking
-            on challenges, I&apos;m always up for it! 😎 I love hanging out in
-            the ever-changing world of web development. 🚀 Teaming up with
-            people from different backgrounds is my jam, and I enjoy the ride as
-            things keep getting cooler in tech. 🌐 I&apos;m always on the
-            lookout for the latest trends, aiming to bring good vibes to your
-            online journey. 🌈✨ Let&apos;s kick off this web adventure together
-            and make the internet a way more awesome place! 🚀💻 Exciting
-            challenges and creative solutions fuel my passion for innovation. 🔥
-            Join me in exploring cutting-edge technologies, where every line of
-            code is a step towards a brighter digital future. 🌐💡 Together,
-            we&apos;ll shape the online world into a space that&apos;s not just
-            functional but downright extraordinary! 🌟💫😊 #HelloWorld
-            #WebDevMagic #InnovationJourney
+            Hey there! 👋 I&apos;m Oluwafisayo Ibrahim. 💻✨ I&apos;m a frontend developer 
+            focused on TypeScript and React.js for  building interactive and easy-to-use web apps, 
+            and JavaScript, HTML, and CSS🛠️ .Whether it&apos;s coding or taking on new challenges,
+            I&apos;m all in😎. I enjoy the ever-evolving world of web development and collaborating 
+            with people from all kinds of backgrounds💻.I&apos;m always on the lookout for new trends to 
+            keep things fresh🌐💡. Let&apos;s team up and make the web a more exciting place together! 🚀
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton

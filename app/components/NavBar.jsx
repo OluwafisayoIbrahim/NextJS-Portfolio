@@ -65,7 +65,7 @@ export const NavBar = () => {
             href="/"
             className="text-2xl md:text-5xl text-white font-semibold"
           >
-            Oluwafisayo&apos; Portfolio
+            Oluwafisayo&apos;s Portfolio
           </Link>
           <div
             className="menu md:w-auto"
@@ -93,7 +93,7 @@ export const NavBar = () => {
           <div className="flex flex-wrap lg:py-4 items-center justify-between mx-auto px-4 py-2">
             <Link
               href="/"
-              className="text-2xl md:text-5xl text-white font-semibold"
+              className="text-lg sm:text-xl md:text-sm lg:text-3xl xl:text-4xl text-white font-semibold"
             >
               Oluwafisayo&apos;s Portfolio
             </Link>
@@ -115,11 +115,11 @@ export const NavBar = () => {
         <AnimatePresence>
           {navbarOpen && (
             <motion.div
-              className="menu-overlay fixed top-0 left-0 right-0 bottom-0 bg-[#121212] bg-opacity-90 flex items-center justify-center z-50"
-              initial={{ opacity: 0, y: '-100%' }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: '-100%' }}
-              transition={{ duration: 0.5 }}
+              className="menu-overlay fixed top-0 left-0 right-0 bottom-0 bg-[#121212] backdrop-blur-sm bg-opacity-90 flex items-center justify-center z-50"
+              initial={{ opacity: 0, x: '100%' }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: '100%' }}
+              transition={{ duration: 0.3 }}
             >
               <div className="mobile-menu absolute top-2 right-4">
                 <button

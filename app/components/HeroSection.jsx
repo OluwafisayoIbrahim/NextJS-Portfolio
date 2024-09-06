@@ -32,7 +32,7 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            With over 2 years of experience, I have honed my skills in web
+            With over 3 years of experience, I have honed my skills in web
             development. My expertise includes HTML, CSS, JavaScript, React.js, Next.js
             and TypeScript.
           </p>
